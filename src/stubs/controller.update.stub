@@ -1,0 +1,11 @@
+public function update(Request $request)
+{
+    ${{ modelNameSingularLowerCase }} = {{ modelName }}::find();
+    ${{ modelNameSingularLowerCase }}->{{ field }} = $request['{{ field }}];
+    ${{ modelNameSingularLowerCase }}->save();
+
+    return response()->json([
+        'status' => (bool)${{ modelNameSingularLowerCase }},
+        'data    => ${{ modelNameSingularLowerCase }}
+    ]);
+}

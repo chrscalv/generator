@@ -1,0 +1,9 @@
+/** 
+* @param string
+* @return json
+*/
+
+public function index()
+{
+    return response()->json({{ ModelNameSingular }}::all(), 200);
+}

@@ -1,0 +1,25 @@
+{
+    "name": "chrscalv/apps-generator",
+    "description": "awosome app generator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher Calvin Sebastiano",
+            "email": "chrscalvn@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "^7.3|8.0",
+        "laravel/framework" : "^7.0|^8.0",
+        "rtconner/laravel-tagging" : ">=4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {},
+    "autoload-dev": {
+        "psr-4": {}
+    }
+}

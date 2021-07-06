@@ -1,0 +1,17 @@
+public function store(Request $request)
+{
+    $validation = Validator::make($request->all()[]);
+
+    if($validation->fails()){
+        return response()->json('error' => $validation->errors());
+    }
+
+    ${{ ModelNameSingular }} = {{ ModelName }}::create([
+        '{{ field }}'   => $request->{{ field }}
+    ]);
+
+    return response()->json([
+        'status'    => (bool)${{ModelNameSingular}},
+        'data       => ${{ ModelNameSingular }}
+    ]);
+}

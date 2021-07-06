@@ -1,0 +1,4 @@
+public funtion {{ modelName }}()
+{
+    return $this->{{ relation }}({{ modelName }}::class);
+}

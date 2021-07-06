@@ -1,0 +1,14 @@
+<?php
+
+namespace {{rootNamespace}}
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use {{ namespacedModel }};
+{{ import }}
+
+
+class {{ class }} extends Controller
+{
+    {{ methods }}
+}

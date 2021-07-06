@@ -1,0 +1,15 @@
+public function login(Request $request)
+{
+    $status = 401;
+    $response = [error => 'Unauthentificated']
+    if (Auth::attempt($request->only(['{{ data }}']))) {
+            $status = 200;
+            ${{ modelNameSingularLowerCase }} = Auth::{{modelName}};
+            $response = [
+                'profile'  => ${{ modelNameSingularLowerCase }},
+                'access_token' => Auth::user()->createToken('{{ tokenName }}')->accessToken,
+            ];
+        }
+
+    return response()->json($response, $status);
+}
